@@ -29,6 +29,8 @@ would be calculated via rowthings and business logic.
 function qux!(b, rowthings, bvalues)
     li = localindices(b)
     values = bvalues[li...]
+    # note that setindex requires collections not scalars
+    # and the assigment is with = and .=
     b[li...] = values
 end
 
@@ -57,7 +59,9 @@ function bar!(A, rowthings, colthings, Avalues)
   for (i, row) in enumerate(rowthings[li])
     for (j, col) in enumerate(colthings[lj])
       v = Avalues[row, col]
-      A[row:row, col:col] = v:v # note that setindex requires collections not scalars
+      # note that setindex requires collections not scalars
+      # and the assigment is with = and .=
+      A[row:row, col:col] = v:v
     end
   end
 end
