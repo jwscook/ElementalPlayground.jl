@@ -1,0 +1,7 @@
+name = "ElementalPlayground"
+uuid = "3b54a201-fcf3-44a5-9f7f-e41fc0ccf98d"
+authors = ["James Cook <cookjws@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+LinearAlgebra = "37e2e46d-f89d-539d-b4ee-838fcccc9c8e"
