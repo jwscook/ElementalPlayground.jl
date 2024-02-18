@@ -19,8 +19,6 @@ addprocs(man, exeflags="--project=distributed");
   using LinearAlgebra
   using Elemental
 
-  @eval include_string(ElementalPlayground, "using Elemental")
-
   M = @fetchfrom 1 M
   N = @fetchfrom 1 N
 
