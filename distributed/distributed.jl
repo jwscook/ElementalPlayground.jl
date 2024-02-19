@@ -14,7 +14,7 @@ man = MPIWorkerManager(2);
 
 addprocs(man, exeflags="--project=distributed");
 
-@mpi_do man begin
+@mpi_do man begin # or @everywhere begin, both work
   using ElementalPlayground
   using LinearAlgebra
   using Elemental
