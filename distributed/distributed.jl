@@ -18,6 +18,8 @@ addprocs(man, exeflags="--project=distributed");
   using ElementalPlayground
   using LinearAlgebra
   using Elemental
+  import ElementalPlayground.localindices
+  localindices(A::Elemental.DistMatrix) = Elemental.localindices(A)
 
   M = @fetchfrom 1 M
   N = @fetchfrom 1 N
